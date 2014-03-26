@@ -47,7 +47,7 @@ else
 Return
 
 timer_flag:
-title:="Ä§ÊÞÊÀ½ç"
+title:="é­”å…½ä¸–ç•Œ"
 WinGet, id, list, %title%
 Loop, %id%
 {
