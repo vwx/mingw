@@ -33,11 +33,11 @@
  '(default ((t (:inherit nil :stipple nil :background "black" :foreground "wheat" :inverse-video nil :box nil :strike-through nil :overline nil :underline nil :slant normal :weight normal :height 163 :width normal :foundry "outline" :family "DejaVu Sans Mono")))))
 
 ;; English Font
-;;(set-frame-font "DejaVu Sans Mono-20")
-;;(set-default-font "DejaVu Sans Mono-20")
-(setq initial-frame-alist '((top . 100) (left . 0)(width . 110) (height . 28)))
+(set-frame-font "DejaVu Sans Mono-16")
+(set-default-font "DejaVu Sans Mono-16")
+(setq initial-frame-alist '((top . 100) (left . 100)(width . 120) (height . 32)))
 (setq default-frame-alist
-      '((top . 100) (left . 100) (width . 110) (height . 28)
+      '((top . 100) (left . 100) (width . 120) (height . 32)
         (font . "DejaVu Sans Mono-16")))
 (set-face-attribute 'default nil :font "DejaVu Sans Mono")
 
@@ -46,13 +46,14 @@
 ;; (font-spec :family "WenQuanYi Micro Hei Mono")
 ;; (font-spec :family "Microsoft Yahei UI Light")
 (set-fontset-font "fontset-default"
-                  'gb18030 '("PingFang SC Regular" . "unicode-bmp"))
+                  'gb18030 '("Microsoft Yahei UI" . "unicode-bmp")
+                  )
 
 (if (display-graphic-p)
     (dolist (charset '(han kana symbol cjk-misc bopomofo))
       (set-fontset-font (frame-parameter nil 'font)
                         charset
-                        (font-spec :family "PingFang SC Regular")))
+                        (font-spec :family "Microsoft Yahei UI")))
   )
 (setq face-font-rescale-alist
       '(("WenQuanYi Zen Hei" . 1.2)
