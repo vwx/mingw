@@ -1,97 +1,75 @@
-autoconf 2.69-3
-autogen 5.18.4-2
-automake-wrapper 10-1
-bash 4.3.046-1
-bash-completion 2.3-1
-bsdcpio 3.2.1-1
-bsdtar 3.2.1-1
-bzip2 1.0.6-2
-catgets 1.1-2
-coreutils 8.25-1
-crypt 1.3-1
-curl 7.50.3-1
-dash 0.5.9.1-1
-diffutils 3.5-1
-file 5.28-2
-filesystem 2016.07-2
-findutils 4.6.0-1
-flex 2.6.1-1
-gawk 4.1.4-1
-gcc-libs 5.3.0-3
-git 2.10.1-1
-gnu-netcat 0.7.1-1
-grep 2.26-1
-guile 2.0.11-3
-gzip 1.8-1
-inetutils 1.9.2-1
-info 6.1-1
-less 481-1
-lftp 4.7.3-1
-libgc 7.2.d-1
-libguile 2.0.11-3
-libltdl 2.4.6-2
-libunistring 0.9.6-1
-lndir 1.0.3-1
-make 4.2.1-1
-mingw-w64-x86_64-binutils 2.27-2
-mingw-w64-x86_64-bzip2 1.0.6-5
-mingw-w64-x86_64-cairo 1.15.2-4
-mingw-w64-x86_64-cloog 0.18.1-3
-mingw-w64-x86_64-crt-git 5.0.0.4745.d2384c2-1
-mingw-w64-x86_64-dbus 1.10.12-1
-mingw-w64-x86_64-expat 2.2.0-1
-mingw-w64-x86_64-fontconfig 2.12.0-2
-mingw-w64-x86_64-freetype 2.7-1
-mingw-w64-x86_64-gcc 6.2.0-2
-mingw-w64-x86_64-gcc-libs 6.2.0-2
-mingw-w64-x86_64-gdk-pixbuf2 2.36.0-3
-mingw-w64-x86_64-gettext 0.19.7-1
-mingw-w64-x86_64-giflib 5.1.4-1
-mingw-w64-x86_64-glib2 2.50.1-2
-mingw-w64-x86_64-gmp 6.1.1-1
-mingw-w64-x86_64-gnutls 3.5.5-2
-mingw-w64-x86_64-harfbuzz 1.3.2-1
-mingw-w64-x86_64-headers-git 5.0.0.4747.0f8f626-1
-mingw-w64-x86_64-isl 0.17.1-1
-mingw-w64-x86_64-libcroco 0.6.11-1
-mingw-w64-x86_64-libffi 3.2.1-4
-mingw-w64-x86_64-libiconv 1.14-5
-mingw-w64-x86_64-libjpeg-turbo 1.5.1-1
-mingw-w64-x86_64-libpng 1.6.26-1
-mingw-w64-x86_64-librsvg 2.40.16-2
-mingw-w64-x86_64-libtiff 4.0.6-1
-mingw-w64-x86_64-libwinpthread-git 5.0.0.4741.2c8939a-1
-mingw-w64-x86_64-libxml2 2.9.4-2
-mingw-w64-x86_64-make 4.1.2351.a80a8b8-1
-mingw-w64-x86_64-mpc 1.0.3-2
-mingw-w64-x86_64-mpfr 3.1.4.p3-4
-mingw-w64-x86_64-pango 1.40.3-1
-mingw-w64-x86_64-pixman 0.34.0-3
-mingw-w64-x86_64-pkg-config 0.29.1-2
-mingw-w64-x86_64-tools-git 5.0.0.4669.7de6266-1
-mingw-w64-x86_64-winpthreads-git 5.0.0.4741.2c8939a-1
-mingw-w64-x86_64-xpm-nox 4.2.0-4
-mingw-w64-x86_64-xz 5.2.2-1
-mingw-w64-x86_64-zlib 1.2.8-10
-mintty 1~2.6.2-1
-msys2-keyring r9.397a52e-1
-msys2-runtime 2.6.0-1
-nano 2.7.0-1
-ncurses 6.0.20161001-1
-openssh 7.3p1-2
-pacman 5.0.1-1
-pacman-mirrors 20160112-1
-pactoys-git r2.07ca37f-1
-pkg-config 0.29.1-1
-pkgfile 15-1
-python 3.4.3-3
-rebase 4.4.2-1
-rsync 3.1.2-2
-sed 4.2.2-2
-tar 1.29-1
-texinfo 6.1-1
-tftp-hpa 5.2-1
-time 1.7-1
-tzcode 2015.e-1
-util-linux 2.26.2-1
-which 2.21-2
+autoconf
+autogen
+automake-wrapper
+bash
+bash-completion
+bsdcpio
+bsdtar
+bzip2
+catgets
+coreutils
+crypt
+curl
+dash
+file
+filesystem
+findutils
+flex
+gawk
+gcc-libs
+git
+gnu-netcat
+grep
+guile
+gzip
+inetutils
+info
+less
+lftp
+lndir
+make
+mingw-w64-x86_64-binutils
+mingw-w64-x86_64-flac
+mingw-w64-x86_64-gcc
+mingw-w64-x86_64-gdk-pixbuf2
+mingw-w64-x86_64-giflib
+mingw-w64-x86_64-gnutls
+mingw-w64-x86_64-isl
+mingw-w64-x86_64-lame
+mingw-w64-x86_64-libcroco
+mingw-w64-x86_64-librsvg
+mingw-w64-x86_64-libxml2
+mingw-w64-x86_64-make
+mingw-w64-x86_64-mpc
+mingw-w64-x86_64-mpfr
+mingw-w64-x86_64-pango
+mingw-w64-x86_64-pixman
+mingw-w64-x86_64-pkg-config
+mingw-w64-x86_64-tools-git
+mingw-w64-x86_64-winpthreads-git
+mingw-w64-x86_64-xpm-nox
+mingw-w64-x86_64-xz
+mintty
+msys2-keyring
+msys2-launcher-git
+msys2-runtime
+nano
+ncurses
+pacman
+pacman-mirrors
+pactoys-git
+pax-git
+pkg-config
+pkgfile
+python
+rebase
+rsync
+sed
+tar
+texinfo
+tftp-hpa
+time
+ttyrec
+tzcode
+util-linux
+which
