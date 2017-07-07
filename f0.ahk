@@ -3,12 +3,15 @@
 
 SetWorkingDir %A_ScriptDir%
 flag := 0
+;;title := "World of Warcraft"
+title := "ahk_exe Wow-64.exe"
+WinGet, id, list, %title%
 
 ^f12::
 If (flag=0)
 {
   flag := 1
-  SetTimer timer_flag, 20000
+  SetTimer timer_flag, 1500
 }
 else
 {
@@ -18,23 +21,13 @@ else
 Return
 
 timer_flag:
-;;title := "World of Warcraft"
-title := "ahk_exe dtyxj.exe"
-WinGet, id, list, %title%
 Loop, %id%
 {
     this_id := id%A_Index%
     WinGetClass, class, ahk_id %this_id%
-    WinActivate, ahk_id %this_id%
-    MouseGetPos, px, py, this_id
-    ToolTip, ahk_id %this_id%`nahk_class %class%`n%title%`nControl: %px%  %py%, 100, 100
-    Random, rand, 1000, 3000
-    Sleep, rand
-    Random, randx, 910, 1000
-    Random, randy, 510, 550
-    Random, rands, 20, 80
-    MouseMove, randx, randy, rands
-    Click
-    ;;ControlSend, , {SPACE}, ahk_id %this_id%
+    ;;WinActivate, ahk_id %this_id%
+    ControlSend, , t, ahk_id %this_id%
+    ControlSend, , {f12}, ahk_id %this_id%
+    ControlSend, , {f11}, ahk_id %this_id%
 }
 return
