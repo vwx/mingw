@@ -26,7 +26,7 @@ Loop, %id%
     this_id := id%A_Index%
     WinGetClass, class, ahk_id %this_id%
     ;;WinActivate, ahk_id %this_id%
-    ControlSend, , t, ahk_id %this_id%
+    ControlSend, , {f10}, ahk_id %this_id%
     ControlSend, , {f12}, ahk_id %this_id%
     ControlSend, , {f11}, ahk_id %this_id%
 }
