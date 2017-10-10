@@ -10,7 +10,7 @@
  '(browse-url-browser-function (quote browse-url-firefox))
  '(case-fold-search nil)
  '(column-number-mode t)
- '(current-language-environment "UTF-8")
+ '(current-language-environment "Chinese-GB18030")
  '(default-input-method "chinese-py-punct")
  '(desktop-save-mode t)
  '(display-time-mode t)
@@ -46,14 +46,14 @@
 ;; (font-spec :family "WenQuanYi Micro Hei Mono")
 ;; (font-spec :family "Microsoft Yahei UI Light")
 (set-fontset-font "fontset-default"
-                  'gb18030 '("Microsoft Yahei UI" . "unicode-bmp")
+                  'gb18030 '("PingFang SC Regular" . "unicode-bmp")
                   )
 
 (if (display-graphic-p)
     (dolist (charset '(han kana symbol cjk-misc bopomofo))
       (set-fontset-font (frame-parameter nil 'font)
                         charset
-                        (font-spec :family "Microsoft Yahei UI")))
+                        (font-spec :family "PingFang SC Regular")))
   )
 (setq face-font-rescale-alist
       '(("WenQuanYi Zen Hei" . 1.2)
@@ -63,11 +63,12 @@
         ("Microsoft Yahei UI" . 1.2)
         ))
 
-(prefer-coding-system 'utf-8)
-(set-language-environment 'utf-8)
-(set-terminal-coding-system 'utf-8)
-(set-keyboard-coding-system 'utf-8)
-(set-clipboard-coding-system 'utf-8)
+;(set-language-environment 'chinese-gb18030)
+;(set-language-environment 'utf-8)
+;(set-terminal-coding-system 'utf-8)
+;(set-keyboard-coding-system 'utf-8)
+;(set-clipboard-coding-system 'utf-8)
+(prefer-coding-system 'utf-8-auto)
 
 (setq system-time-locale "C")
 ;; Show buffer name in title
