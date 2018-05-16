@@ -299,10 +299,10 @@ Section -post
   WriteRegDword HKLM "Software\MyEmacs" "VersionBuild" "${VER_BUILD}"
 !endif
 
-  WriteRegExpandStr HKLM "${REG_UNINST_KEY}" "UninstallString" '"$INSTDIR\uninst-myemacs.exe"'
+  WriteRegExpandStr HKLM "${REG_UNINST_KEY}" "UninstallString" '"$INSTDIR\bin\uninst-myemacs.exe"'
   WriteRegExpandStr HKLM "${REG_UNINST_KEY}" "InstallLocation" "$INSTDIR"
   WriteRegStr HKLM "${REG_UNINST_KEY}" "DisplayName" "Nullsoft Install System${NAMESUFFIX}"
-  WriteRegStr HKLM "${REG_UNINST_KEY}" "DisplayIcon" "$INSTDIR\uninst-myemacs.exe,0"
+  WriteRegStr HKLM "${REG_UNINST_KEY}" "DisplayIcon" "$INSTDIR\bin\uninst-myemacs.exe,0"
   WriteRegStr HKLM "${REG_UNINST_KEY}" "DisplayVersion" "${VERSION}"
 !ifdef VER_MAJOR & VER_MINOR & VER_REVISION & VER_BUILD
   WriteRegDWORD HKLM "${REG_UNINST_KEY}" "VersionMajor" "${VER_MAJOR}"
@@ -313,7 +313,7 @@ Section -post
   WriteRegDWORD HKLM "${REG_UNINST_KEY}" "NoModify" "1"
   WriteRegDWORD HKLM "${REG_UNINST_KEY}" "NoRepair" "1"
 
-  WriteUninstaller $INSTDIR\uninst-myemacs.exe
+  WriteUninstaller $INSTDIR\bin\uninst-myemacs.exe
 
   ${MementoSectionSave}
 
@@ -481,6 +481,12 @@ FunctionEnd
 ;--------------------------------
 ;Uninstaller Section
 
+Function un.onInit
+
+  StrCpy $INSTDIR "$INSTDIR" -3
+
+FunctionEnd
+
 Section Uninstall
 
   SetDetailsPrint textonly
@@ -518,7 +524,8 @@ Section Uninstall
   Delete "$SMPROGRAMS\MyEmacs${NAMESUFFIX}.lnk"
   Delete "$DESKTOP\MyEmacs${NAMESUFFIX}.lnk"
   Delete $INSTDIR\COPYING
-  Delete $INSTDIR\uninst-myemacs.exe
+  Delete $INSTDIR\bin\runemacs.exe
+  Delete $INSTDIR\bin\uninst-myemacs.exe
   RMDir /r $INSTDIR\Bin
   RMDir /r $INSTDIR\Examples
   RMDir /r $INSTDIR\Plugins
