@@ -1,0 +1,21 @@
+#!/bin/bash
+while :
+do
+    echo 'Hit CTRL+C...'
+    sleep 10
+done
+
+while :; do echo 'Hit CTRL+C...'; sleep 10; done
+
+
+while :; do echo 'Hit CTRL+C...'; git push; sleep 10; done
+
+
+for (( ; ; ))
+do
+    echo 'Hit CTRL+C...'
+    sleep 10
+done
+
+
+#shutdown -r -f -t 38000
