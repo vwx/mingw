@@ -19,3 +19,7 @@ done
 
 
 #shutdown -r -f -t 38000
+
+# visual studio 2017 layout
+#vs_community.exe --layout d:\vs2017layout --add Microsoft.VisualStudio.Workload.NativeDesktop --includeRecommended --lang en-US
+#D:\vs2017layout\vs_community.exe --add Microsoft.VisualStudio.Workload.NativeDesktop --includeRecommended
