@@ -1,1 +1,1 @@
-https://github.com/vwx/utils
+https://github.com/vwx/mingw
