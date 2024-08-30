@@ -77,14 +77,14 @@
  '(display-time-mode t)
  '(global-font-lock-mode t)
  '(global-hl-line-mode t)
- '(js-indent-level 4)
- '(js-switch-indent-offset 4)
+ '(js-indent-level 2)
+ '(js-switch-indent-offset 2)
  '(load-home-init-file t t)
  '(make-backup-files nil)
  '(org-html-doctype "html5")
  '(org-html-use-unicode-chars t)
  '(package-selected-packages
-   '(## company lsp-python-ms lsp-mode typescript-mode ahk-mode))
+   '(## lsp-python-ms lsp-mode typescript-mode ahk-mode))
  '(php-mode-coding-style 'psr2)
  '(scroll-bar-mode nil)
  '(show-paren-mode t)
@@ -119,11 +119,11 @@
     ))
 
 (setq use-default-font-for-symbols nil)
-(set-frame-font "Source Code Pro-16")
+(set-frame-font "Source Code Pro-20")
 (when (display-graphic-p)
   (setq fonts
         (cond ((eq system-type 'gnu/linux) '("Cascadia Mono" "HYXuanSong"))
-              ((eq system-type 'windows-nt) '("Source Code Pro" "Noto Sans Mono CJK SC"))))
+              ((eq system-type 'windows-nt) '("Cascadia Mono" "Microsoft YaHei UI"))))
   (setq face-font-rescale-alist
         '(("HYQiHei" . 1.2)
           ("HYXuanSong" . 1.2)
@@ -154,6 +154,13 @@
                       (font-spec :family "Noto Sans Mono CJK SC")
                       )
     )
+  (dolist (charset '(
+                     (#x2160 . #x218F)
+                     ))
+    (set-fontset-font "fontset-default" charset
+                      (font-spec :family "Noto Sans Mono CJK SC")
+                      )
+    )
   )
 
 (use-package recentf
@@ -163,8 +170,6 @@
           recentf-max-menu-items 15)
     (recentf-mode)
     ))
-
-(use-package json-mode)
 
 (setq org-todo-keywords 
       '((sequence "TODO(t)" "INPROGRESS(i)" "WAITING(w)" "REVIEW(r)" "|" "DONE(d)" "CANCELED(c)")))
@@ -184,7 +189,7 @@
             (tool-bar-lines . 0)
             (width . 100)
             (height . 25)
-            (background-color . "#eeeeee")
+            (background-color . "#fefefe")
             (foreground-color . "#363636")
             (left . 50)
             (top . 50)
@@ -328,7 +333,6 @@
             )
           )
 
-
 (add-hook 'sgml-mode-hook
           (lambda ()
             ;; Default indentation to 1, but let SGML mode guess, too.
@@ -357,9 +361,9 @@
  ;; If there is more than one, they won't work right.
  )
 
-(use-package company
-  :ensure t
-  :init (global-company-mode))
+;;(use-package company
+;;  :ensure t
+;;  :init (global-company-mode))
 
 (use-package lsp-mode
   :init
@@ -372,6 +376,13 @@
   )
 
 
+(use-package json-mode)
+(add-hook 'json-mode-hook
+          (lambda ()
+            (set (make-local-variable 'js-indent-level) 2)
+            (set (make-local-variable 'js-switch-indent-offset) 2)
+            )
+          )
 
 (eval-after-load 'lsp-mode
   '(progn
